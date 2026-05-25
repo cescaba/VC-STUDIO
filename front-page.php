@@ -1,0 +1,473 @@
+<?php
+/**
+ * Front page template
+ */
+get_header();
+?>
+
+<!-- HERO -->
+<section class="hero" id="index">
+    <h1><?php _e('Construimos sitios web que ', 'vcstudio-theme'); ?><?php _e('funcionan', 'vcstudio-theme'); ?></h1>
+    <p class="hero-description"><?php _e('Estudio de diseño y desarrollo web para marcas que toman su presencia digital en serio.', 'vcstudio-theme'); ?></p>
+
+    <div class="hero-cta">
+        <a href="#servicios" class="btn-hero btn-hero--primary"><?php _e('Conoce más', 'vcstudio-theme'); ?></a>
+        <a href="#contacto" class="btn-hero btn-hero--secondary"><?php _e('Escríbenos', 'vcstudio-theme'); ?></a>
+    </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+    <span class="section-label">SERVICIOS</span>
+
+    <div class="services-intro">
+        <h2><?php _e('Diseño, ', 'vcstudio-theme'); ?><span class="accent"><?php _e('desarrollo', 'vcstudio-theme'); ?></span> <?php _e('y ', 'vcstudio-theme'); ?><span class="muted"><?php _e('consultoría', 'vcstudio-theme'); ?></span>.</h2>
+        <div class="services-intro-text">
+            <p><?php _e('Cuatro disciplinas integradas. Cada servicio se calibra al estado, objetivo y madurez digital del proyecto.', 'vcstudio-theme'); ?></p>
+        </div>
+    </div>
+
+    <div class="services-grid">
+        <!-- Servicio 1 -->
+        <article class="service-card">
+            <div class="service-details">
+                <div class="service-header">
+                    <h3><?php _e('Diseño Web', 'vcstudio-theme'); ?></h3>
+                    <div class="service-tags">UI • UX • PROTOTIPO</div>
+                </div>
+                <p class="service-description"><?php _e('Sitios a medida centrados en marca, contenido y conversión. Investigación, arquitectura de información, wireframes, UI de alta fidelidad y prototipo navegable entregado en Figma.', 'vcstudio-theme'); ?></p>
+            </div>
+            <div class="service-specs">
+                <div class="spec">
+                    <span class="spec-label"><?php _e('Diseño personalizado', 'vcstudio-theme'); ?></span>
+                    <span class="spec-value">Único para tu marca</span>
+                </div>
+                <div class="spec">
+                    <span class="spec-label"><?php _e('UX optimizado', 'vcstudio-theme'); ?></span>
+                    <span class="spec-value">Fácil y agradable de usar</span>
+                </div>
+                <div class="spec">
+                    <span class="spec-label"><?php _e('Prototipo interactivo', 'vcstudio-theme'); ?></span>
+                    <span class="spec-value">Lo apruebas antes de desarrollar</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Servicio 2 -->
+        <article class="service-card">
+            <div class="service-details">
+                <div class="service-header">
+                    <h3><?php _e('Desarrollo', 'vcstudio-theme'); ?></h3>
+                    <div class="service-tags">NEXT.JS • CMS</div>
+                </div>
+                <p class="service-description"><?php _e('Sitios de alto rendimiento con optimización técnica, SEO estratégico y experiencia impecable en cualquier dispositivo. Integraciones a medida, CMS editable y motor de analítica.', 'vcstudio-theme'); ?></p>
+            </div>
+            <div class="service-specs">
+                <div class="spec">
+                    <span class="spec-label"><?php _e('Responsive', 'vcstudio-theme'); ?></span>
+                    <span class="spec-value">Perfecto en móviles, tablet y desktop</span>
+                </div>
+                <div class="spec">
+                    <span class="spec-label"><?php _e('SEO', 'vcstudio-theme'); ?></span>
+                    <span class="spec-value">Google / IA</span>
+                </div>
+                <div class="spec">
+                    <span class="spec-label"><?php _e('Hosting', 'vcstudio-theme'); ?></span>
+                    <span class="spec-value">Alojamiento seguro y rápido</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Servicio 3 -->
+        <article class="service-card">
+              <div class="service-details">
+                <div class="service-header">
+                    <h3><?php _e('Branding Digital', 'vcstudio-theme'); ?></h3>
+                    <div class="service-tags">IDENTIDAD • GUIDELINES • ARTE</div>
+                </div>
+                <p class="service-description"><?php _e('Sistemas de identidad pensados para entornos digitales. Logotipo, tipografía, paleta, sistema visual y manual de marca con todas las piezas listas para llevarlas a producto.', 'vcstudio-theme'); ?></p>
+            </div>
+            <div class="service-specs">
+                <div class="spec">
+                    <span class="spec-label"><?php _e('Identidad completa', 'vcstudio-theme'); ?></span>
+                    <span class="spec-value">logo, colores, tipografía</span>
+                </div>
+                <div class="spec">
+                    <span class="spec-label"><?php _e('Aplicable en todo', 'vcstudio-theme'); ?></span>
+                    <span class="spec-value">web, redes, impresos</span>
+                </div>
+                <div class="spec">
+                    <span class="spec-label"><?php _e('Manual de marca', 'vcstudio-theme'); ?></span>
+                    <span class="spec-value"><?php _e('guía clara de cómo usar tu identidad', 'vcstudio-theme'); ?></span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Servicio 4 -->
+        <article class="service-card">
+            <div class="service-details">
+                <div class="service-header">
+                    <h3><?php _e('Mantenimiento', 'vcstudio-theme'); ?></h3>
+                    <div class="service-tags">PERFORMANCE • SEGURIDAD • EVOLUCIÓN</div>
+                </div>
+                <p class="service-description"><?php _e('Rendimiento, seguridad y evolución continua. Auditorías trimestrales, optimización de Core Web Vitals, iteración basada en datos y soporte dedicado para plataformas en producción.', 'vcstudio-theme'); ?></p>
+            </div>
+            <div class="service-specs">
+                <div class="spec">
+                    <span class="spec-label">Respuesta en 24 horas</span>
+                    <span class="spec-value">rápido cuando necesitas ayuda</span>
+                </div>
+                <div class="spec">
+                    <span class="spec-label">Seguridad y actualizaciones</span>
+                    <span class="spec-value">protección contra ataques y vulnerabilidades</span>
+                </div>
+                <div class="spec">
+                    <span class="spec-label">Reportes mensuales</span>
+                    <span class="spec-value">sabes cómo está performando tu sitio</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+    <span class="section-label">PROYECTOS</span>
+
+    <div class="services-intro">
+        <h2><?php _e('Proyectos', 'vcstudio-theme'); ?></h2>
+        <div class="services-intro-text">
+            <p><?php _e('Trabajo destacado entre 2021–2026. Marcas de gastronomía, hospitalidad, retail, consultoría y tecnología.', 'vcstudio-theme'); ?></p>
+        </div>
+    </div>
+<div class="pf">
+      <a class="pf__card pf__card--w8" href="https://shopcasona.com/" target="_blank">
+        <div class="pf__card-media">
+          <div class="pf__card-video-container">
+            <video class="pf__card-video" poster="<?php echo get_template_directory_uri(); ?>/assets/img/casona-screen.png" id="pf-casona-video">
+              <source src="<?php echo get_template_directory_uri(); ?>/assets/img/casonavideo.mp4" type="video/mp4">
+            </video>
+            <button class="pf__card-play-btn" data-video="pf-casona-video" aria-label="Reproducir video">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="24" fill="white" opacity="0.9"/>
+                <path d="M20 16L20 32L32 24L20 16Z" fill="#0b0a0d"/>
+              </svg>
+            </button>
+          </div>
+          <span class="pf__card-num">Mantenimiento · Desarrollo</span>
+          <span class="pf__card-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+          </span>
+        </div>
+        <div class="pf__card-info">
+          <span class="pf__card-name">Casona</span>
+          <div class="pf__card-meta"><span>Shopify</span> · <span>Plantilla Personalizada</span></div>
+        </div>
+      </a>
+
+      <a class="pf__card pf__card--w4" href="https://www.almalima.es/" target="_blank">
+        <div class="pf__card-media" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/ALMA-portada.png'); background-size: cover; background-position: center;">
+          <span class="pf__card-num">BRANDING</span>
+          <span class="pf__card-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+          </span>
+        </div>
+        <div class="pf__card-info">
+          <span class="pf__card-name">Alma Lima</span>
+          <div class="pf__card-meta"><span>HOSPITALIDAD</span></div>
+        </div>
+      </a>
+
+      <a class="pf__card pf__card--w6" href="https://huitsushi.ch/" target="_blank">
+        <div class="pf__card-media">
+          <div class="pf__card-video-container">
+            <video class="pf__card-video" poster="<?php echo get_template_directory_uri(); ?>/assets/img/huit-img.png" id="pf-huit-video">
+              <source src="<?php echo get_template_directory_uri(); ?>/assets/img/huit-video.mp4" type="video/mp4">
+            </video>
+            <button class="pf__card-play-btn" data-video="pf-huit-video" aria-label="Reproducir video">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="24" fill="white" opacity="0.9"/>
+                <path d="M20 16L20 32L32 24L20 16Z" fill="#0b0a0d"/>
+              </svg>
+            </button>
+          </div>
+          <span class="pf__card-num">DISEÑO · Desarrollo</span>
+          <span class="pf__card-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+          </span>
+        </div>
+        <div class="pf__card-info">
+          <span class="pf__card-name">Huit</span>
+          <div class="pf__card-meta"><span>WORDPRESS</span> · <span>Plantilla Personalizada</span></div>
+        </div>
+      </a>
+
+      <a class="pf__card pf__card--w6" href="https://kama.pe/" target="_blank">
+        <div class="pf__card-media">
+          <div class="pf__card-video-container">
+            <video class="pf__card-video" poster="<?php echo get_template_directory_uri(); ?>/assets/img/kama-img.png" id="pf-kama-video">
+              <source src="<?php echo get_template_directory_uri(); ?>/assets/img/kama-video.mp4" type="video/mp4">
+            </video>
+            <button class="pf__card-play-btn" data-video="pf-kama-video" aria-label="Reproducir video">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="24" fill="white" opacity="0.9"/>
+                <path d="M20 16L20 32L32 24L20 16Z" fill="#0b0a0d"/>
+              </svg>
+            </button>
+          </div>
+          <span class="pf__card-num">DISEÑO · Desarrollo</span>
+          <span class="pf__card-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+          </span>
+        </div>
+        <div class="pf__card-info">
+          <span class="pf__card-name">Kama</span>
+          <div class="pf__card-meta"><span>WORDPRESS </span> · <span>Plantilla Personalizada</span></div>
+        </div>
+      </a>
+
+      <a class="pf__card pf__card--w4" href="#">
+        <div class="pf__card-media">
+          <div class="pf__card-video-container">
+            <video class="pf__card-video" poster="<?php echo get_template_directory_uri(); ?>/assets/img/kanapka-img.jpg" id="pf-kanapka-video">
+              <source src="<?php echo get_template_directory_uri(); ?>/assets/img/kanapka-video.webm" type="video/webm">
+            </video>
+            <button class="pf__card-play-btn" data-video="pf-kanapka-video" aria-label="Reproducir video">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="24" fill="white" opacity="0.9"/>
+                <path d="M20 16L20 32L32 24L20 16Z" fill="#0b0a0d"/>
+              </svg>
+            </button>
+          </div>
+          <span class="pf__card-num">Branding</span>
+          <span class="pf__card-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+          </span>
+        </div>
+        <div class="pf__card-info">
+          <span class="pf__card-name">Kanapka</span>
+          <div class="pf__card-meta"><span>Cafetería</span></div>
+        </div>
+      </a>
+
+      <a class="pf__card pf__card--w9" href="https://latinhall.com/" target="_blank">
+        <div class="pf__card-media">
+          <div class="pf__card-video-container">
+            <video class="pf__card-video" id="pf-latinhall-video" poster="<?php echo get_template_directory_uri(); ?>/assets/img/latinhall-portada.png" muted playsinline>
+              <source src="<?php echo get_template_directory_uri(); ?>/assets/img/latinhal-video.webm" type="video/webm">
+            </video>
+            <button class="pf__card-play-btn" data-video="pf-latinhall-video" aria-label="Play video">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="24" fill="white" opacity="0.9"/>
+                <path d="M19 15v18l12-9z" fill="#0b0a0d"/>
+              </svg>
+            </button>
+          </div>
+          <span class="pf__card-num">DISEÑO · Desarrollo</span>
+          <span class="pf__card-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+          </span>
+        </div>
+        <div class="pf__card-info">
+          <span class="pf__card-name">Latin Hall</span>
+          <div class="pf__card-meta"><span>E-commerce · Prestashop</span></div>
+        </div>
+      </a>
+
+      <a class="pf__card pf__card--w6" href="https://sirensips.com/" target="_blank">
+        <div class="pf__card-media">
+          <div class="pf__card-video-container">
+            <video class="pf__card-video" id="pf-sirensips-video" poster="<?php echo get_template_directory_uri(); ?>/assets/img/sirensips-img.png" muted playsinline>
+              <source src="<?php echo get_template_directory_uri(); ?>/assets/img/sirensips-video.webm" type="video/webm">
+            </video>
+            <button class="pf__card-play-btn" data-video="pf-sirensips-video" aria-label="Play video">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="24" fill="white" opacity="0.9"/>
+                <path d="M20 16L20 32L32 24L20 16Z" fill="#0b0a0d"/>
+              </svg>
+            </button>
+          </div>
+          <span class="pf__card-num">Diseño · Desarrollo</span>
+          <span class="pf__card-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+          </span>
+        </div>
+        <div class="pf__card-info">
+          <span class="pf__card-name">Siren Sips</span>
+          <div class="pf__card-meta"><span>E-commerce · Woocommerce</span></div>
+        </div>
+      </a>
+
+      <a class="pf__card pf__card--w6" href="https://rubiconandpartners.com/" target="_blank">
+        <div class="pf__card-media">
+          <div class="pf__card-video-container">
+            <video class="pf__card-video" id="pf-rubicon-video" poster="<?php echo get_template_directory_uri(); ?>/assets/img/rubicon-portada.png" muted playsinline>
+              <source src="<?php echo get_template_directory_uri(); ?>/assets/img/rubicon-video.webm" type="video/webm">
+            </video>
+            <button class="pf__card-play-btn" data-video="pf-rubicon-video" aria-label="Play video">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="24" fill="white" opacity="0.9"/>
+                <path d="M20 16L20 32L32 24L20 16Z" fill="#0b0a0d"/>
+              </svg>
+            </button>
+          </div>
+          <span class="pf__card-num">Diseño · Desarrollo</span>
+          <span class="pf__card-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+          </span>
+        </div>
+        <div class="pf__card-info">
+          <span class="pf__card-name">Rubicon & Partners</span>
+          <div class="pf__card-meta"><span>Wordpress · Página Institucional</span></div>
+        </div>
+      </a>
+    </div>
+    <div class="portfolio-cta">
+        <a href="#" class="btn"><?php _e('VER ARCHIVO COMPLETO', 'vcstudio-theme'); ?> →</a>
+    </div>
+</section>
+<div class="banner">
+  <div class="banner__track">
+    <span>Diseño Web</span><span class="dot">✦</span>
+    <span>Desarrollo a medida</span><span class="dot">✦</span>
+    <span>Branding digital</span><span class="dot">✦</span>
+    <span>Consultoría</span><span class="dot">✦</span>
+    <!-- Se duplican los items para que el loop sea continuo -->
+    <span>Diseño Web</span><span class="dot">✦</span>
+    <span>Desarrollo a medida</span><span class="dot">✦</span>
+    <span>Branding digital</span><span class="dot">✦</span>
+    <span>Consultoría</span><span class="dot">✦</span>
+  </div>
+</div>
+<!-- PROCESS -->
+<section id="proceso">
+    <span class="section-label">MÉTODO</span>
+
+    <div class="services-intro">
+        <h2><?php _e('Cómo ', 'vcstudio-theme'); ?><span class="accent"><?php _e('trabajamos', 'vcstudio-theme'); ?></span>.</h2>
+        <div class="services-intro-text">
+          <p><?php _e('Cuatro fases con entregables claros y revisiones semanales. Sin sorpresas en el calendario ni en el presupuesto.', 'vcstudio-theme'); ?></p>
+        </div>
+    </div>
+<section class="section" id="proceso">
+  <div class="container">
+    <div class="process">
+      <article class="step">
+        <div class="step__head">
+          <span>FASE 01</span>
+          <span>Semana 1</span>
+        </div>
+        <div class="step__num">01</div>
+        <div>
+          <h3 class="step__title">Descubrir</h3>
+          <p class="step__desc">Investigación, definición de objetivos y arquitectura.</p>
+          <ul class="step__list">
+            <li>Kick-off</li>
+            <li>Research</li>
+            <li>Entrevistas</li>
+            <li>Sitemap</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step__head">
+          <span>FASE 02</span>
+          <span>Semana 2–3</span>
+        </div>
+        <div class="step__num">02</div>
+        <div>
+          <h3 class="step__title">Diseñar</h3>
+          <p class="step__desc">UI de alta fidelidad y prototipo navegable validado.</p>
+          <ul class="step__list">
+            <li>Wireframes</li>
+            <li>Sistema visual</li>
+            <li>UI hi-fi</li>
+            <li>Prototipo</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step__head">
+          <span>FASE 03</span>
+          <span>Semana 4–6</span>
+        </div>
+        <div class="step__num">03</div>
+        <div>
+          <h3 class="step__title">Construir</h3>
+          <p class="step__desc">Desarrollo a medida, integración CMS y optimización.</p>
+          <ul class="step__list">
+            <li>Maquetación</li>
+            <li>CMS</li>
+            <li>Animación</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step__head">
+          <span>FASE 04</span>
+          <span>Semana 7+</span>
+        </div>
+        <div class="step__num">04</div>
+        <div>
+          <h3 class="step__title">Evolucionar</h3>
+          <p class="step__desc">Lanzamiento, SEO técnico e iteración basada en datos.</p>
+          <ul class="step__list">
+            <li>Deploy</li>
+            <li>Analítica</li>
+            <li>SEO</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+</section>
+
+<!-- STACK -->
+<section>
+    <div class="stack-header">
+        <h2><?php _e('Stack & ', 'vcstudio-theme'); ?><span class="accent"><?php _e('plataformas', 'vcstudio-theme'); ?></span></h2>
+        <p><?php _e('Trabajamos con las plataformas adecuadas a cada proyecto. Estas son las que dominamos:', 'vcstudio-theme'); ?></p>
+    </div>
+
+    <div class="stack-grid">
+        <div class="stack-item">
+            <div class="stack-label"><?php _e('CMS visual', 'vcstudio-theme'); ?></div>
+            <div class="stack-name">Webflow</div>
+        </div>
+        <div class="stack-item">
+            <div class="stack-label"><?php _e('CMS abierto', 'vcstudio-theme'); ?></div>
+            <div class="stack-name">WordPress</div>
+        </div>
+        <div class="stack-item">
+            <div class="stack-label"><?php _e('E-commerce', 'vcstudio-theme'); ?></div>
+            <div class="stack-name">Shopify</div>
+        </div>
+        <div class="stack-item">
+            <div class="stack-label"><?php _e('Framework', 'vcstudio-theme'); ?></div>
+            <div class="stack-name">Next.js</div>
+        </div>
+        <div class="stack-item">
+            <div class="stack-label"><?php _e('No-code', 'vcstudio-theme'); ?></div>
+            <div class="stack-name">Framer</div>
+        </div>
+        <div class="stack-item">
+            <div class="stack-label"><?php _e('App builder', 'vcstudio-theme'); ?></div>
+            <div class="stack-name">Bubble</div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contacto">
+    <h2><?php _e('Listo para dar el ', 'vcstudio-theme'); ?><span class="accent"><?php _e('siguiente paso', 'vcstudio-theme'); ?></span>.</h2>
+    <div class="cta-buttons">
+        <a href="mailto:contacto@vcstudio.agency" class="btn primary">contacto@vcstudio.agency</a>
+        <a href="#" class="btn"><?php _e('AGENDAR LLAMADA', 'vcstudio-theme'); ?> • CALENDLY</a>
+    </div>
+</section>
+
+<?php get_footer();
