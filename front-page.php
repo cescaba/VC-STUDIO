@@ -7,7 +7,7 @@ get_header();
 
 <!-- HERO -->
 <section class="hero" id="index">
-    <h1><?php _e('Construimos sitios web que ', 'vcstudio-theme'); ?><?php _e('funcionan', 'vcstudio-theme'); ?></h1>
+    <h1><?php _e('Construimos sitios web que ', 'vcstudio-theme'); ?><span class="accent"><?php _e('funcionan', 'vcstudio-theme'); ?></span>.</h1>
     <p class="hero-description"><?php _e('Estudio de diseño y desarrollo web para marcas que toman su presencia digital en serio.', 'vcstudio-theme'); ?></p>
 
     <div class="hero-cta">
@@ -17,8 +17,8 @@ get_header();
 </section>
 
 <!-- SERVICIOS -->
-<section id="servicios">
-    <span class="section-label">SERVICIOS</span>
+<section id="servicios" class="services-section">
+    <span class="section-label"><?php _e('SERVICIOS', 'vcstudio-theme'); ?></span>
 
     <div class="services-intro">
         <h2><?php _e('Diseño, ', 'vcstudio-theme'); ?><span class="accent"><?php _e('desarrollo', 'vcstudio-theme'); ?></span> <?php _e('y ', 'vcstudio-theme'); ?><span class="muted"><?php _e('consultoría', 'vcstudio-theme'); ?></span>.</h2>
@@ -131,7 +131,7 @@ get_header();
 </section>
 
 <!-- PORTFOLIO -->
-<section id="portfolio">
+<section id="portafolio">
     <span class="section-label">PROYECTOS</span>
 
     <div class="services-intro">
