@@ -20,3 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+function toggleMenu() {
+    const nav = document.querySelector('.nav');
+    nav.classList.toggle('is-open');
+}
+
+document.querySelectorAll('.nav__links a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.nav').classList.remove('is-open');
+    });
+});

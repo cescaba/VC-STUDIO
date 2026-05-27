@@ -433,40 +433,48 @@ get_header();
         <p><?php _e('Trabajamos con las plataformas adecuadas a cada proyecto. Estas son las que dominamos:', 'vcstudio-theme'); ?></p>
     </div>
 
-    <div class="stack-grid">
-        <div class="stack-item">
-            <div class="stack-label"><?php _e('CMS visual', 'vcstudio-theme'); ?></div>
-            <div class="stack-name">Webflow</div>
-        </div>
-        <div class="stack-item">
-            <div class="stack-label"><?php _e('CMS abierto', 'vcstudio-theme'); ?></div>
-            <div class="stack-name">WordPress</div>
-        </div>
-        <div class="stack-item">
-            <div class="stack-label"><?php _e('E-commerce', 'vcstudio-theme'); ?></div>
-            <div class="stack-name">Shopify</div>
-        </div>
-        <div class="stack-item">
-            <div class="stack-label"><?php _e('Framework', 'vcstudio-theme'); ?></div>
-            <div class="stack-name">Next.js</div>
-        </div>
-        <div class="stack-item">
-            <div class="stack-label"><?php _e('No-code', 'vcstudio-theme'); ?></div>
-            <div class="stack-name">Framer</div>
-        </div>
-        <div class="stack-item">
-            <div class="stack-label"><?php _e('App builder', 'vcstudio-theme'); ?></div>
-            <div class="stack-name">Bubble</div>
+    <div class="logos-carousel">
+        <div class="logos-track">
+            
+            <div class="logos-group">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/prestashop.png" alt="PrestaShop">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/woo-commerce.png" alt="WooCommerce">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shopify.png" alt="Shopify">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/wordpress.png" alt="WordPress">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/webflow.png" alt="Webflow">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bubble.png" alt="Bubble">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/wix.png" alt="Wix">
+                
+            </div>
+
+            <div class="logos-group" aria-hidden="true">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/prestashop.png" alt="PrestaShop">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/woo-commerce.png" alt="WooCommerce">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shopify.png" alt="Shopify">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/wordpress.png" alt="WordPress">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/webflow.png" alt="Webflow">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bubble.png" alt="Bubble">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/wix.png" alt="Wix">
+            </div>
+
         </div>
     </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section" id="contacto">
-    <h2><?php _e('Listo para dar el ', 'vcstudio-theme'); ?><span class="accent"><?php _e('siguiente paso', 'vcstudio-theme'); ?></span>.</h2>
+    <h2>
+        <?php _e('Listo para dar <br>el ', 'vcstudio-theme'); ?><span class="accent"><?php _e('siguiente', 'vcstudio-theme'); ?></span><br><?php _e('paso.', 'vcstudio-theme'); ?>
+    </h2>
+
     <div class="cta-buttons">
-        <a href="mailto:contacto@vcstudio.agency" class="btn primary">contacto@vcstudio.agency</a>
-        <a href="#" class="btn"><?php _e('AGENDAR LLAMADA', 'vcstudio-theme'); ?> • CALENDLY</a>
+        <a href="mailto:contacto@vcstudio.agency" class="btn primary">
+            contacto@vcstudio.agency 
+            <span class="arrow">→</span>
+        </a>
+        <a href="#" class="btn secondary">
+            <?php _e('AGENDAR LLAMADA', 'vcstudio-theme'); ?> • CALENDLY
+        </a>
     </div>
 </section>
 
