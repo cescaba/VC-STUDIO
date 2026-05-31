@@ -7,12 +7,18 @@ get_header();
 
 <!-- HERO -->
 <section class="hero" id="index">
-    <h1><?php _e('Construimos sitios web que ', 'vcstudio-theme'); ?><span class="accent"><?php _e('funcionan', 'vcstudio-theme'); ?></span>.</h1>
-    <p class="hero-description"><?php _e('Estudio de diseño y desarrollo web para marcas que toman su presencia digital en serio.', 'vcstudio-theme'); ?></p>
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="<?php echo get_template_directory_uri(); ?>/video-hero.mp4" type="video/mp4">
+    </video>
 
-    <div class="hero-cta">
-        <a href="#servicios" class="btn-hero btn-hero--primary"><?php _e('Conoce más', 'vcstudio-theme'); ?></a>
-        <a href="#contacto" class="btn-hero btn-hero--secondary"><?php _e('Escríbenos', 'vcstudio-theme'); ?></a>
+    <div class="hero-content">
+        <h1><?php _e('Construimos sitios web que ', 'vcstudio-theme'); ?><span class="accent"><?php _e('funcionan', 'vcstudio-theme'); ?></span>.</h1>
+        <p class="hero-description"><?php _e('Estudio de diseño y desarrollo web para marcas que toman su presencia digital en serio.', 'vcstudio-theme'); ?></p>
+
+        <div class="hero-cta">
+            <a href="#servicios" class="btn-hero btn-hero--primary"><?php _e('Conoce más', 'vcstudio-theme'); ?></a>
+            <a href="#contacto" class="btn-hero btn-hero--secondary"><?php _e('Escríbenos', 'vcstudio-theme'); ?></a>
+        </div>
     </div>
 </section>
 
