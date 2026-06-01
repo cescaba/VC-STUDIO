@@ -225,22 +225,34 @@ display: flex;
     pointer-events: auto;
     transform: translateY(0);
   }
+.nav__menu svg {
+  width: 18px;
+  height: 18px;
+}
 
-  .nav.is-open .line-main {
-    opacity: 0;
-  }
-  .nav.is-open .line-top {
-    transform: translateY(6px) rotate(45deg);
-    transform-origin: center;
-  }
-  .nav.is-open .line-bottom {
-    transform: translateY(-6px) rotate(-45deg);
-    transform-origin: center;
-  }
-  
-  .nav__menu svg line {
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
+.nav__menu svg line {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.25s ease-in-out;
+  transform-origin: center;
+}
+
+.line-x1, .line-x2 {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.nav.is-open .line-top,
+.nav.is-open .line-main,
+.nav.is-open .line-bottom {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.nav.is-open .line-x1,
+.nav.is-open .line-x2 {
+  opacity: 1;
+  transform: scale(1);
+}
 }
 /* MAIN */
 main {
@@ -345,6 +357,14 @@ h1 {
 
 }
 
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(36px, 5.5vw, 88px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
 h1 .accent {
   color: var(--accent);
 }
@@ -412,6 +432,7 @@ h1 .accent {
 @media (max-width: 1024px) {
   .hero {
     padding: 0 6% 6rem 6%;
+    height: 60vh;
   }
 
   .hero h1 {
@@ -423,6 +444,7 @@ h1 .accent {
   .hero {
     padding: 0 1.5rem 4rem 1.5rem;
     background-position: 65% center;
+    height: 100vh;
   }
 
   .hero h1 {
@@ -438,7 +460,7 @@ h1 .accent {
   }
 
   .hero-cta {
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
     margin-top: 2.5rem;
     width: 100%;
@@ -494,25 +516,19 @@ h1 .accent {
 
 .services-section {
   background-color: #09080f;
-  padding: 8rem 10%;
+  padding: 6rem 10%;
   color: #ffffff;
 }
 
 .services-intro {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 3rem;
+  gap: 2.5rem;
   margin-bottom: 4rem;
   align-items: start;
 }
 
-.services-intro h2 {
-  font-family: 'Poppins', sans-serif;
-      font-size: clamp(36px, 5.5vw, 88px);
-      font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
+  
 
 .services-intro h2 .accent {
   color: var(--accent);
@@ -552,7 +568,7 @@ display: flex;
 .service-card {
   display: grid;
   grid-template-columns: 3fr 1.5fr;
-  gap: 4rem;
+  gap: 3rem;
   padding: 2rem;
   border-top: 1px solid var(--border);
   align-items: start;
@@ -651,10 +667,6 @@ display: flex;
     padding: 5rem 1.5rem;
   }
 
-  .services-intro h2 {
-    font-size: 2.8rem;
-  }
-
   .service-card {
     display: flex;
     flex-direction: column;
@@ -708,7 +720,8 @@ display: flex;
 }
 .pf__card {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     background: #14111a;
     border: 1px solid #232028;
@@ -721,7 +734,7 @@ display: flex;
 }
 .pf__card-media {
     position: relative;
-    aspect-ratio: 4 / 3;
+    flex: 1;
     overflow: hidden;
     background: linear-gradient(135deg, #15121a 0%, #0b0a0d 100%);
 }
@@ -735,25 +748,36 @@ display: flex;
 .pf__card--w8, .pf__card--w9 {
     grid-column: span 8;
 }
-.pf__card--w8 .pf__card-media {
-    aspect-ratio: 16 / 9;
-}
+
 
 .pf__card--w4 {
     grid-column: span 4;
 }
+
+.pf__card--w8 .pf__card-media,
+.pf__card--w9 .pf__card-media,
+.pf__card--w6 .pf__card-media {
+  aspect-ratio: 16 / 9;
+}
+
+.pf__card--w4[href*="almalima"] .pf__card-media {
+  background-image: url('assets/img/ALMA-portada.png'); 
+  background-size: cover;
+  background-position: center;
+}
+
+.pf__card--w4:nth-of-type(5) .pf__card-video {
+  object-fit: cover;
+}
+
 .pf__card--w4 .pf__card-media {
-    aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1;
+  background-color: #14111a; 
 }
 .pf__card--w6 {
     grid-column: span 6;
 }
-.pf__card--w9 .pf__card-media {
-    aspect-ratio: 12 / 9;
-}
-.pf__card--w6 .pf__card-media {
-    aspect-ratio: 4 / 3;
-}
+
 .pf__card image-slot {
     position: absolute;
     inset: 0;
@@ -795,11 +819,23 @@ display: flex;
     z-index: 3;
 }
 .pf__card-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 20px;
-    border-top: 1px solid #232029;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 20px;
+  border-top: 1px solid #232029;
+}
+.pf__card-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-left: auto;
+}
+.pf__card-meta {
+  flex: 1;
+  min-width: 0;
 }
 .portfolio-header {
   display: grid;
@@ -809,20 +845,19 @@ display: flex;
   align-items: start;
 }
 .pf__card-arrow {
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
-    width: 40px;
-    height: 40px;
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
     border-radius: 50%;
     background: var(--fg);
     color: var(--bg);
     display: grid;
     place-items: center;
-    transform: translateY(8px);
+  transform: translateY(8px);
     opacity: 0;
     transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-    z-index: 3;
+  z-index: 3;
 }
 .pf__card-name {
     font-family: "Poppins", sans-serif;
@@ -845,7 +880,6 @@ display: flex;
 }
 .portfolio-header h2 {
   font-family: 'Audiowide', sans-serif;
-  font-size: 2.5rem;
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -1032,8 +1066,28 @@ display: flex;
     aspect-ratio: 1 / 1;
   }
 
+  .pf__card-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .pf__card-meta-row {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .pf__card-name {
     font-size: 20px;
+  }
+
+  .pf__card-arrow {
+    opacity: 1;
+    transform: none;
+    width: 38px;
+    height: 38px;
+    margin-left: 8px;
   }
 }
 
@@ -1062,10 +1116,9 @@ display: flex;
   .pf__card-arrow {
     opacity: 1;
     transform: none;
-    bottom: 12px;
-    right: 12px;
     width: 34px;
     height: 34px;
+    margin-left: 6px;
   }
   
   .pf__card-arrow svg {
@@ -1074,10 +1127,17 @@ display: flex;
   }
 
   .pf__card-info {
-    flex-direction: column;
-    align-items: flex-start;
     gap: 6px;
     padding: 14px 16px;
+    align-items: flex-start;
+  }
+
+  .pf__card-meta-row {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
   }
 
   .pf__card-name {
@@ -1100,7 +1160,7 @@ display: flex;
 
 #proceso {
   background-color: #09080f; /* Fondo oscuro unificado */
-  padding: 8rem 10%;
+  padding: 6rem 10%;
   color: #ffffff;
 }
 .process-header {
@@ -1113,10 +1173,9 @@ display: flex;
 
 .process-header h2 {
 font-family: 'Poppins', sans-serif;
-    font-size: clamp(36px, 5.5vw, 88px);
-    font-weight: 900;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 .process-header h2 .accent {
@@ -1367,9 +1426,8 @@ font-family: 'Poppins', sans-serif;
 }
 
 .stack-header h2 {
-  font-family: 'Audiowide', sans-serif;
-  font-size: 2.2rem;
-  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
   letter-spacing: -0.02em;
 }
 
@@ -1468,9 +1526,7 @@ font-family: 'Poppins', sans-serif;
     margin-bottom: 2.5rem;
   }
 
-  .stack-header h2 {
-    font-size: 1.8rem;
-  }
+  
 
   .logos-carousel {
     padding: 2rem 0;
@@ -1536,7 +1592,7 @@ font-family: 'Poppins', sans-serif;
 
 .cta-section h2 {
   font-family: 'Poppins', sans-serif;
-  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-size: clamp(36px, 5.5vw, 88px);
   font-weight: 900;
   line-height: 0.95;
   letter-spacing: -0.04em;
@@ -1607,11 +1663,6 @@ font-family: 'Poppins', sans-serif;
   .cta-section {
     padding: 8rem 5%;
   }
-  
-  .cta-section h2 {
-    font-size: 4.5rem;
-    margin-bottom: 3rem;
-  }
 }
 
 @media (max-width: 768px) {
@@ -1620,10 +1671,14 @@ font-family: 'Poppins', sans-serif;
   }
 
   .cta-section h2 {
-    font-size: 3.2rem;
+    font-size: 1.8rem; 
     line-height: 1.0;
     letter-spacing: -0.03em;
     margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
   }
 
   .cta-buttons {
@@ -1654,13 +1709,11 @@ footer {
   padding-bottom: 4rem;
 }
 
-.footer-company {
-  font-family: 'Inter', sans-serif;
-  font-size: 2rem;
-  font-weight: 900;
-  color: var(--fg);
-  letter-spacing: -0.03em;
+.footer-logo {
+  height: 40px;
+  width: auto;
   margin-bottom: 1.5rem;
+  display: block;
 }
 
 .footer-info, .footer-tel {
@@ -1884,12 +1937,7 @@ footer {
     font-size: 1.8rem;
   }
 
-  .services-intro h2,
-  .portfolio-header h2,
-  .process-header h2,
-  .stack-header h2 {
-    font-size: 1.8rem;
-  }
+  
 }
 /* Tablet */
 @media (max-width: 1100px) {

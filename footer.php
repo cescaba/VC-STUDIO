@@ -8,7 +8,7 @@
     <footer>
     <div class="footer-content">
         <div class="footer-brand-column">
-            <div class="footer-company"><?php bloginfo('name'); ?></div>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-vc-white.png" alt="VC Studio" class="footer-logo">
             <div class="footer-info">Lima, Perú — Madrid, España</div>
             <a href="mailto:contacto@vcstudio.agency" class="footer-contact">contacto@vcstudio.agency</a>
             <div class="footer-tel">+34 652 102 478 · +51 982 602 769</div>
@@ -53,21 +53,39 @@
 </footer>
 
     <script>
+      const togglePortfolioVideo = (video) => {
+        if (!video) {
+          return;
+        }
+
+        const btn = video.parentElement.querySelector('.pf__card-play-btn');
+
+        if (video.paused) {
+          video.play();
+          if (btn) btn.style.opacity = '0';
+        } else {
+          video.pause();
+          if (btn) btn.style.opacity = '1';
+        }
+      };
+
       document.querySelectorAll('.pf__card-play-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
           e.preventDefault();
           e.stopPropagation();
-          const videoId = btn.dataset.video;
-          const video = document.getElementById(videoId);
-          if (video) {
-            if (video.paused) {
-              video.play();
-              btn.style.opacity = '0';
-            } else {
-              video.pause();
-              btn.style.opacity = '1';
-            }
+          const video = document.getElementById(btn.dataset.video);
+          togglePortfolioVideo(video);
+        });
+      });
+
+      document.querySelectorAll('.pf__card-video-container').forEach(container => {
+        container.addEventListener('click', (e) => {
+          if (e.target.closest('.pf__card-play-btn')) {
+            return;
           }
+
+          const video = container.querySelector('.pf__card-video');
+          togglePortfolioVideo(video);
         });
       });
 

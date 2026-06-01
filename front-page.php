@@ -147,10 +147,10 @@ get_header();
         </div>
     </div>
 <div class="pf">
-      <a class="pf__card pf__card--w8" href="https://shopcasona.com/" target="_blank">
+      <div class="pf__card pf__card--w8">
         <div class="pf__card-media">
           <div class="pf__card-video-container">
-            <video class="pf__card-video" poster="<?php echo get_template_directory_uri(); ?>/assets/img/casona-screen.png" id="pf-casona-video">
+            <video class="pf__card-video" poster="<?php echo get_template_directory_uri(); ?>/assets/img/casona-screen.png" id="pf-casona-video" muted>
               <source src="<?php echo get_template_directory_uri(); ?>/assets/img/casonavideo.mp4" type="video/mp4">
             </video>
             <button class="pf__card-play-btn" data-video="pf-casona-video" aria-label="Reproducir video">
@@ -161,33 +161,37 @@ get_header();
             </button>
           </div>
           <span class="pf__card-num">Mantenimiento · Desarrollo</span>
-          <span class="pf__card-arrow">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
-          </span>
         </div>
         <div class="pf__card-info">
           <span class="pf__card-name">Casona</span>
-          <div class="pf__card-meta"><span>Shopify</span> · <span>Plantilla Personalizada</span></div>
+          <div class="pf__card-meta-row">
+            <div class="pf__card-meta"><span>Shopify</span> · <span>Plantilla Personalizada</span></div>
+            <span class="pf__card-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+            </span>
+          </div>
         </div>
-      </a>
+      </div>
 
-      <a class="pf__card pf__card--w4" href="https://www.almalima.es/" target="_blank">
+      <div class="pf__card pf__card--w4">
         <div class="pf__card-media" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/ALMA-portada.png'); background-size: cover; background-position: center;">
           <span class="pf__card-num">BRANDING</span>
-          <span class="pf__card-arrow">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
-          </span>
         </div>
         <div class="pf__card-info">
           <span class="pf__card-name">Alma Lima</span>
-          <div class="pf__card-meta"><span>HOSPITALIDAD</span></div>
+          <div class="pf__card-meta-row">
+            <div class="pf__card-meta"><span>HOSPITALIDAD</span></div>
+            <span class="pf__card-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+            </span>
+          </div>
         </div>
-      </a>
+      </div>
 
-      <a class="pf__card pf__card--w6" href="https://huitsushi.ch/" target="_blank">
+      <div class="pf__card pf__card--w6">
         <div class="pf__card-media">
           <div class="pf__card-video-container">
-            <video class="pf__card-video" poster="<?php echo get_template_directory_uri(); ?>/assets/img/huit-img.png" id="pf-huit-video">
+            <video class="pf__card-video" poster="<?php echo get_template_directory_uri(); ?>/assets/img/huit-img.png" id="pf-huit-video" muted>
               <source src="<?php echo get_template_directory_uri(); ?>/assets/img/huit-video.mp4" type="video/mp4">
             </video>
             <button class="pf__card-play-btn" data-video="pf-huit-video" aria-label="Reproducir video">
@@ -198,20 +202,22 @@ get_header();
             </button>
           </div>
           <span class="pf__card-num">DISEÑO · Desarrollo</span>
-          <span class="pf__card-arrow">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
-          </span>
         </div>
         <div class="pf__card-info">
           <span class="pf__card-name">Huit</span>
-          <div class="pf__card-meta"><span>WORDPRESS</span> · <span>Plantilla Personalizada</span></div>
+          <div class="pf__card-meta-row">
+            <div class="pf__card-meta"><span>WORDPRESS</span> · <span>Plantilla Personalizada</span></div>
+            <span class="pf__card-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+            </span>
+          </div>
         </div>
-      </a>
+      </div>
 
-      <a class="pf__card pf__card--w6" href="https://kama.pe/" target="_blank">
+      <div class="pf__card pf__card--w6">
         <div class="pf__card-media">
           <div class="pf__card-video-container">
-            <video class="pf__card-video" poster="<?php echo get_template_directory_uri(); ?>/assets/img/kama-img.png" id="pf-kama-video">
+            <video class="pf__card-video" poster="<?php echo get_template_directory_uri(); ?>/assets/img/kama-img.png" id="pf-kama-video" muted>
               <source src="<?php echo get_template_directory_uri(); ?>/assets/img/kama-video.mp4" type="video/mp4">
             </video>
             <button class="pf__card-play-btn" data-video="pf-kama-video" aria-label="Reproducir video">
@@ -222,20 +228,22 @@ get_header();
             </button>
           </div>
           <span class="pf__card-num">DISEÑO · Desarrollo</span>
-          <span class="pf__card-arrow">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
-          </span>
         </div>
         <div class="pf__card-info">
           <span class="pf__card-name">Kama</span>
-          <div class="pf__card-meta"><span>WORDPRESS </span> · <span>Plantilla Personalizada</span></div>
+          <div class="pf__card-meta-row">
+            <div class="pf__card-meta"><span>WORDPRESS </span> · <span>Plantilla Personalizada</span></div>
+            <span class="pf__card-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+            </span>
+          </div>
         </div>
-      </a>
+      </div>
 
-      <a class="pf__card pf__card--w4" href="#">
+      <div class="pf__card pf__card--w4">
         <div class="pf__card-media">
           <div class="pf__card-video-container">
-            <video class="pf__card-video" poster="<?php echo get_template_directory_uri(); ?>/assets/img/kanapka-img.jpg" id="pf-kanapka-video">
+            <video class="pf__card-video" poster="<?php echo get_template_directory_uri(); ?>/assets/img/kanapka-img.jpg" id="pf-kanapka-video" muted>
               <source src="<?php echo get_template_directory_uri(); ?>/assets/img/kanapka-video.webm" type="video/webm">
             </video>
             <button class="pf__card-play-btn" data-video="pf-kanapka-video" aria-label="Reproducir video">
@@ -246,17 +254,19 @@ get_header();
             </button>
           </div>
           <span class="pf__card-num">Branding</span>
-          <span class="pf__card-arrow">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
-          </span>
         </div>
         <div class="pf__card-info">
           <span class="pf__card-name">Kanapka</span>
-          <div class="pf__card-meta"><span>Cafetería</span></div>
+          <div class="pf__card-meta-row">
+            <div class="pf__card-meta"><span>Cafetería</span></div>
+            <span class="pf__card-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+            </span>
+          </div>
         </div>
-      </a>
+      </div>
 
-      <a class="pf__card pf__card--w9" href="https://latinhall.com/" target="_blank">
+      <div class="pf__card pf__card--w9">
         <div class="pf__card-media">
           <div class="pf__card-video-container">
             <video class="pf__card-video" id="pf-latinhall-video" poster="<?php echo get_template_directory_uri(); ?>/assets/img/latinhall-portada.png" muted playsinline>
@@ -270,17 +280,19 @@ get_header();
             </button>
           </div>
           <span class="pf__card-num">DISEÑO · Desarrollo</span>
-          <span class="pf__card-arrow">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
-          </span>
         </div>
         <div class="pf__card-info">
           <span class="pf__card-name">Latin Hall</span>
-          <div class="pf__card-meta"><span>E-commerce · Prestashop</span></div>
+          <div class="pf__card-meta-row">
+            <div class="pf__card-meta"><span>E-commerce · Prestashop</span></div>
+            <span class="pf__card-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+            </span>
+          </div>
         </div>
-      </a>
+      </div>
 
-      <a class="pf__card pf__card--w6" href="https://sirensips.com/" target="_blank">
+      <div class="pf__card pf__card--w6">
         <div class="pf__card-media">
           <div class="pf__card-video-container">
             <video class="pf__card-video" id="pf-sirensips-video" poster="<?php echo get_template_directory_uri(); ?>/assets/img/sirensips-img.png" muted playsinline>
@@ -294,17 +306,19 @@ get_header();
             </button>
           </div>
           <span class="pf__card-num">Diseño · Desarrollo</span>
-          <span class="pf__card-arrow">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
-          </span>
         </div>
         <div class="pf__card-info">
           <span class="pf__card-name">Siren Sips</span>
-          <div class="pf__card-meta"><span>E-commerce · Woocommerce</span></div>
+          <div class="pf__card-meta-row">
+            <div class="pf__card-meta"><span>E-commerce · Woocommerce</span></div>
+            <span class="pf__card-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+            </span>
+          </div>
         </div>
-      </a>
+      </div>
 
-      <a class="pf__card pf__card--w6" href="https://rubiconandpartners.com/" target="_blank">
+      <div class="pf__card pf__card--w6">
         <div class="pf__card-media">
           <div class="pf__card-video-container">
             <video class="pf__card-video" id="pf-rubicon-video" poster="<?php echo get_template_directory_uri(); ?>/assets/img/rubicon-portada.png" muted playsinline>
@@ -318,15 +332,17 @@ get_header();
             </button>
           </div>
           <span class="pf__card-num">Diseño · Desarrollo</span>
-          <span class="pf__card-arrow">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
-          </span>
         </div>
         <div class="pf__card-info">
           <span class="pf__card-name">Rubicon & Partners</span>
-          <div class="pf__card-meta"><span>Wordpress · Página Institucional</span></div>
+          <div class="pf__card-meta-row">
+            <div class="pf__card-meta"><span>Wordpress · Página Institucional</span></div>
+            <span class="pf__card-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+            </span>
+          </div>
         </div>
-      </a>
+      </div>
     </div>
     <div class="portfolio-cta">
         <a href="#" class="btn"><?php _e('VER ARCHIVO COMPLETO', 'vcstudio-theme'); ?> →</a>
@@ -355,7 +371,7 @@ get_header();
           <p><?php _e('Cuatro fases con entregables claros y revisiones semanales. Sin sorpresas en el calendario ni en el presupuesto.', 'vcstudio-theme'); ?></p>
         </div>
     </div>
-<section class="section" id="proceso">
+<div>
   <div class="container">
     <div class="process">
       <article class="step">
@@ -429,7 +445,7 @@ get_header();
       </article>
     </div>
   </div>
-</section>
+</div>
 </section>
 
 <!-- STACK -->

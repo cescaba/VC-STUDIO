@@ -33,11 +33,14 @@
         <a href="#contacto" class="nav__contact">Contacto</a>
         
         <button class="nav__menu" aria-label="Menú" onclick="toggleMenu()">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <line x1="3" y1="12" x2="21" y2="12" class="line-main"></line>
-                <line x1="3" y1="6" x2="21" y2="6" class="line-top"></line>
-                <line x1="3" y1="18" x2="21" y2="18" class="line-bottom"></line>
-            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="4" y1="6" x2="20" y2="6" class="line-top"></line>
+            <line x1="4" y1="12" x2="20" y2="12" class="line-main"></line>
+            <line x1="4" y1="18" x2="20" y2="18" class="line-bottom"></line>
+            
+            <line x1="5" y1="5" x2="19" y2="19" class="line-x1"></line>
+            <line x1="19" y1="5" x2="5" y2="19" class="line-x2"></line>
+        </svg>
         </button>
     </div>
 </header>
