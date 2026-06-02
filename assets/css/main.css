@@ -1617,7 +1617,6 @@ font-family: 'Poppins', sans-serif;
 .cta-section {
   text-align: left;
   padding: 10rem 10%;
-  background: radial-gradient(circle at 10% 50%, var(--bg-2) 0%, var(--bg) 100%);
   color: var(--fg);
   position: relative;
 }
@@ -1727,10 +1726,25 @@ font-family: 'Poppins', sans-serif;
 
 /* FOOTER */
 footer {
-  background: var(--bg);
+  background: var(--bg) url('../img/vc_footer.png') no-repeat center;
+  background-size: cover;
   padding: 6rem 4% 2rem 4%;
   font-family: Arial, sans-serif;
   overflow: hidden;
+  position: relative;
+  border-top: 1px solid gray;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, #0b0a0d 0%, rgba(11, 10, 13, 0) 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .footer-content {
@@ -1739,6 +1753,8 @@ footer {
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 4rem;
   padding-bottom: 4rem;
+  position: relative;
+  z-index: 2;
 }
 
 .footer-logo {
@@ -1771,11 +1787,11 @@ footer {
 }
 
 .footer-section h4 {
-  font-family: monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--fg-4);
+  color: white;
   margin-bottom: 1.8rem;
   font-weight: 700;
 }
@@ -1830,16 +1846,19 @@ footer {
   font-size: 0.75rem;
   letter-spacing: 1px;
   padding-top: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
-.credits-left { text-align: center; }
+.credits-left { text-align: center;   color:white;}
 .credits-center { 
   text-align: center; 
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color:white;
 }
-.credits-right { text-align: right; }
+.credits-right { text-align: right;   color:white;}
 
 .status-dot {
   width: 6px;
