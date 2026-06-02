@@ -778,7 +778,7 @@ display: flex;
 
 .pf__card--w4 .pf__card-media {
   aspect-ratio: 1 / 1;
-  background-color: #14111a; 
+  background-color: #14111a;
 }
 .pf__card--w6 {
     grid-column: span 6;
@@ -1129,12 +1129,20 @@ display: flex;
     border-radius: 6px;
   }
 
+  .pf__card.pf__card--kanapka {
+    height: 500px;
+  }
+
   .pf {
     gap: 24px;
   }
 
   .pf__card-media {
     aspect-ratio: 16 / 9 !important;
+  }
+
+  .pf__card.pf__card--kanapka .pf__card-media {
+    aspect-ratio: 359 / 418 !important;
   }
 
   .pf__card-num {
@@ -1893,6 +1901,7 @@ footer::before {
 @media (max-width: 768px) {
   footer {
     padding: 4rem 1.5rem 2rem 1.5rem;
+    background-image: none;
   }
 
   .footer-content {

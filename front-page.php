@@ -255,7 +255,7 @@ get_header();
         </div>
       </div>
 
-      <div class="pf__card pf__card--w4">
+      <div class="pf__card pf__card--w4 pf__card--kanapka">
         <div class="pf__card-media">
           <div class="pf__card-video-container">
             <video class="pf__card-video" poster="<?php echo get_template_directory_uri(); ?>/assets/img/kanapka-img.jpg" id="pf-kanapka-video" muted>
