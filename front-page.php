@@ -486,17 +486,17 @@ get_header();
 <!-- CTA -->
 <section class="cta-section" id="contacto">
     <h2>
-        <?php _e('Listo para dar <br>el ', 'vcstudio-theme'); ?><span class="accent"><?php _e('siguiente', 'vcstudio-theme'); ?></span><br><?php _e('paso.', 'vcstudio-theme'); ?>
+        <?php _e('Listo para dar <br>el ', 'vcstudio-theme'); ?><span class="accent"><?php _e('siguiente', 'vcstudio-theme'); ?></span><br><?php _e('paso?', 'vcstudio-theme'); ?>
     </h2>
 
     <div class="cta-buttons">
-        <a href="mailto:contacto@vcstudio.agency" class="btn primary">
-            contacto@vcstudio.agency 
-            <span class="arrow">→</span>
-        </a>
-        <a href="#" class="btn secondary">
-            <?php _e('AGENDAR LLAMADA', 'vcstudio-theme'); ?> • CALENDLY
-        </a>
+      <a href="mailto:info@vcstudio.agency" class="btn-hero btn-hero--primary">
+        info@vcstudio.agency  
+        <span class="arrow"> →</span>
+      </a>
+      <a href="https://wa.me/34655103474?text=Hola%20VC%20Studio%2C%20me%20interesa%20un%20presupuesto%20para%20un%20sitio%20web.%20Mi%20nombre%20es%20%5BNombre%5D%20y%20pueden%20contactarme%20en%20%5BTel%5D.%20Gracias%21" class="btn-hero btn-hero--secondary" target="_blank" rel="noopener noreferrer">
+        <?php _e('ESCRIBENOS AL WHATSAPP', 'vcstudio-theme'); ?>
+      </a>
     </div>
 </section>
 

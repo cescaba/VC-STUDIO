@@ -26,8 +26,27 @@ function toggleMenu() {
     nav.classList.toggle('is-open');
 }
 
+
 document.querySelectorAll('.nav__links a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.querySelector('.nav').classList.remove('is-open');
-    });
+  link.addEventListener('click', () => {
+    const nav = document.querySelector('.nav');
+    if (nav) nav.classList.remove('is-open');
+  });
+});
+
+document.addEventListener('click', (e) => {
+  const nav = document.querySelector('.nav');
+  if (!nav) return;
+  if (!nav.classList.contains('is-open')) return;
+
+  if (!nav.contains(e.target)) {
+    nav.classList.remove('is-open');
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' || e.key === 'Esc') {
+    const nav = document.querySelector('.nav');
+    if (nav && nav.classList.contains('is-open')) nav.classList.remove('is-open');
+  }
 });
