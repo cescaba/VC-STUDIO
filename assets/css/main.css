@@ -992,12 +992,38 @@ display: flex;
   transition: all 0.3s ease;
 }
 
+.pf__icon--pause {
+  display: none;
+}
+
+.pf__card-video-container.is-playing .pf__card-play-btn {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pf__card-video-container.is-playing:hover .pf__card-play-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.pf__card-video-container.is-playing:hover .pf__icon--play {
+  display: none;
+}
+
+.pf__card-video-container.is-playing:hover .pf__icon--pause {
+  display: block;
+}
+
 .pf__card-play-btn:hover svg circle {
   opacity: 1;
 }
 
 .pf__card-play-btn:hover svg path {
   transform: translateX(2px);
+}
+
+.pf__card-play-btn:hover svg rect {
+  transform: translateY(0);
 }
 
 .portfolio-tag {

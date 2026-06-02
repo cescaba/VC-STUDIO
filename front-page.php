@@ -154,9 +154,14 @@ get_header();
               <source src="<?php echo get_template_directory_uri(); ?>/assets/img/casonavideo.mp4" type="video/mp4">
             </video>
             <button class="pf__card-play-btn" data-video="pf-casona-video" aria-label="Reproducir video">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <svg class="pf__icon pf__icon--play" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
                 <circle cx="24" cy="24" r="24" fill="white" opacity="0.9"/>
                 <path d="M20 16L20 32L32 24L20 16Z" fill="#0b0a0d"/>
+              </svg>
+              <svg class="pf__icon pf__icon--pause" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <circle cx="24" cy="24" r="24" fill="white" opacity="0.9"/>
+                <rect x="18" y="16" width="4" height="16" rx="1" fill="#0b0a0d"/>
+                <rect x="26" y="16" width="4" height="16" rx="1" fill="#0b0a0d"/>
               </svg>
             </button>
           </div>
@@ -195,9 +200,14 @@ get_header();
               <source src="<?php echo get_template_directory_uri(); ?>/assets/img/huit-video.mp4" type="video/mp4">
             </video>
             <button class="pf__card-play-btn" data-video="pf-huit-video" aria-label="Reproducir video">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <svg class="pf__icon pf__icon--play" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
                 <circle cx="24" cy="24" r="24" fill="white" opacity="0.9"/>
                 <path d="M20 16L20 32L32 24L20 16Z" fill="#0b0a0d"/>
+              </svg>
+              <svg class="pf__icon pf__icon--pause" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <circle cx="24" cy="24" r="24" fill="white" opacity="0.9"/>
+                <rect x="18" y="16" width="4" height="16" rx="1" fill="#0b0a0d"/>
+                <rect x="26" y="16" width="4" height="16" rx="1" fill="#0b0a0d"/>
               </svg>
             </button>
           </div>
@@ -221,9 +231,14 @@ get_header();
               <source src="<?php echo get_template_directory_uri(); ?>/assets/img/kama-video.mp4" type="video/mp4">
             </video>
             <button class="pf__card-play-btn" data-video="pf-kama-video" aria-label="Reproducir video">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <svg class="pf__icon pf__icon--play" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
                 <circle cx="24" cy="24" r="24" fill="white" opacity="0.9"/>
                 <path d="M20 16L20 32L32 24L20 16Z" fill="#0b0a0d"/>
+              </svg>
+              <svg class="pf__icon pf__icon--pause" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <circle cx="24" cy="24" r="24" fill="white" opacity="0.9"/>
+                <rect x="18" y="16" width="4" height="16" rx="1" fill="#0b0a0d"/>
+                <rect x="26" y="16" width="4" height="16" rx="1" fill="#0b0a0d"/>
               </svg>
             </button>
           </div>
@@ -247,9 +262,14 @@ get_header();
               <source src="<?php echo get_template_directory_uri(); ?>/assets/img/kanapka-video.webm" type="video/webm">
             </video>
             <button class="pf__card-play-btn" data-video="pf-kanapka-video" aria-label="Reproducir video">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <svg class="pf__icon pf__icon--play" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
                 <circle cx="24" cy="24" r="24" fill="white" opacity="0.9"/>
                 <path d="M20 16L20 32L32 24L20 16Z" fill="#0b0a0d"/>
+              </svg>
+              <svg class="pf__icon pf__icon--pause" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <circle cx="24" cy="24" r="24" fill="white" opacity="0.9"/>
+                <rect x="18" y="16" width="4" height="16" rx="1" fill="#0b0a0d"/>
+                <rect x="26" y="16" width="4" height="16" rx="1" fill="#0b0a0d"/>
               </svg>
             </button>
           </div>
@@ -486,7 +506,7 @@ get_header();
 <!-- CTA -->
 <section class="cta-section" id="contacto">
     <h2>
-        <?php _e('Listo para dar <br>el ', 'vcstudio-theme'); ?><span class="accent"><?php _e('siguiente', 'vcstudio-theme'); ?></span><br><?php _e('paso?', 'vcstudio-theme'); ?>
+        <?php _e('¿Listo para dar <br>el ', 'vcstudio-theme'); ?><span class="accent"><?php _e('siguiente', 'vcstudio-theme'); ?></span><br><?php _e('paso?', 'vcstudio-theme'); ?>
     </h2>
 
     <div class="cta-buttons">

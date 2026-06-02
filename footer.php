@@ -45,14 +45,28 @@
           return;
         }
 
-        const btn = video.parentElement.querySelector('.pf__card-play-btn');
-
         if (video.paused) {
           video.play();
-          if (btn) btn.style.opacity = '0';
         } else {
           video.pause();
-          if (btn) btn.style.opacity = '1';
+        }
+      };
+
+      const syncPortfolioVideoState = (video) => {
+        if (!video) {
+          return;
+        }
+
+        const container = video.closest('.pf__card-video-container');
+        const btn = container ? container.querySelector('.pf__card-play-btn') : null;
+        const isPlaying = !video.paused && !video.ended;
+
+        if (container) {
+          container.classList.toggle('is-playing', isPlaying);
+        }
+
+        if (btn) {
+          btn.setAttribute('aria-label', isPlaying ? 'Pausar video' : 'Reproducir video');
         }
       };
 
@@ -77,13 +91,16 @@
       });
 
       document.querySelectorAll('.pf__card-video').forEach(video => {
+        syncPortfolioVideoState(video);
+
         video.addEventListener('play', () => {
-          const btn = video.parentElement.querySelector('.pf__card-play-btn');
-          if (btn) btn.style.opacity = '0';
+          syncPortfolioVideoState(video);
         });
         video.addEventListener('pause', () => {
-          const btn = video.parentElement.querySelector('.pf__card-play-btn');
-          if (btn) btn.style.opacity = '1';
+          syncPortfolioVideoState(video);
+        });
+        video.addEventListener('ended', () => {
+          syncPortfolioVideoState(video);
         });
       });
     </script>
